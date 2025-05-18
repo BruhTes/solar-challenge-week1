@@ -14,7 +14,7 @@ git clone https://github.com/your-username/solar-challenge-week1.git
 cd solar-challenge-week1
 ```
 
-### ** 2. Create a Virtual Environment **
+### **2. Create a Virtual Environment**
 
 ``` bash
 python -m venv .venv
@@ -25,14 +25,14 @@ python -m venv .venv
     py -m venv .venv
     ```
 
-### ** 3. Activate the Virtual Environment **
+### **3. Activate the Virtual Environment**
 
 ```bash
 .venv\Scripts\activate
 ```
    #### You should now see a (.venv) at the start of your terminal prompt
 
-### ** 4. Install Dependencies **
+### **4. Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ``` 
