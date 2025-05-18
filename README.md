@@ -19,11 +19,11 @@ cd solar-challenge-week1
 ``` bash
 python -m venv .venv
 ```
-    #### If python does not work, try using py:
+#### If python does not work, try using py:
 
-    ```bash
-    py -m venv .venv
-    ```
+```bash
+py -m venv .venv
+```
 
 ### **3. Activate the Virtual Environment**
 
