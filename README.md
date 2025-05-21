@@ -41,7 +41,7 @@ This repository includes:
 An interactive dashboard has been developed using Streamlit to visualize and compare key insights across Benin, Sierra Leone, and Togo, based on the exploratory data analysis.
 
 ### 🔗 Access the Dashboard
-Live App: 🔗 Launch the Dashboard
+[🔗 Launch the Dashboard](https://solar-challenge-week-stp2aubmodq2wgshqrzsjj.streamlit.app/)
 
 ### 💻 Run Locally
 To run the dashboard on your local machine:
@@ -70,6 +70,8 @@ streamlit run app/main.py
 
 ### 🖼️ Dashboard Screenshots
 Screenshots from the deployed app are available below:
+![screencapture-localhost-8502-2025-05-21-21_36_28](https://github.com/user-attachments/assets/a05f90f7-83e1-442b-8d39-658a7259fc1e)
+
 ---
 
 ## How to Run
