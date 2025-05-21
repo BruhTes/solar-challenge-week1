@@ -41,7 +41,7 @@ This repository includes:
 An interactive dashboard has been developed using Streamlit to visualize and compare key insights across Benin, Sierra Leone, and Togo, based on the exploratory data analysis.
 
 ### 🔗 Access the Dashboard
-[🔗 Launch the Dashboard](https://solar-challenge-week-stp2aubmodq2wgshqrzsjj.streamlit.app/)
+[🔗 Launch the Dashboard]()
 
 ### 💻 Run Locally
 To run the dashboard on your local machine:
@@ -59,8 +59,8 @@ streamlit run app/main.py
 - ✅ Country Selection: Select one or more countries for comparison.
 
 - 📊 Interactive Visualizations:
-     -Boxplots for GHI, DNI, temperature, and humidity.
-     -Time series trends for solar irradiance and weather variables.
+     -- Boxplots for GHI, DNI, temperature, and humidity.
+     -- Time series trends for solar irradiance and weather variables.
 
 - 🏆 Performance Ranking:
 
