@@ -36,6 +36,40 @@ This repository includes:
 - Clear instructions to reproduce environment and run analysis
 - Well-organized project structure for scalability and collaboration
 
+
+## 📊 Interactive Dashboard
+An interactive dashboard has been developed using Streamlit to visualize and compare key insights across Benin, Sierra Leone, and Togo, based on the exploratory data analysis.
+
+### 🔗 Access the Dashboard
+Live App: 🔗 Launch the Dashboard
+
+### 💻 Run Locally
+To run the dashboard on your local machine:
+
+- Ensure all dependencies in requirements.txt are installed.
+- Confirm the cleaned datasets are placed inside the data/ directory.
+
+Run the following command from the root of the project:
+
+```bash
+streamlit run app/main.py
+```
+### 🧩 Dashboard Features
+
+- ✅ Country Selection: Select one or more countries for comparison.
+
+- 📊 Interactive Visualizations:
+     -Boxplots for GHI, DNI, temperature, and humidity.
+     -Time series trends for solar irradiance and weather variables.
+
+- 🏆 Performance Ranking:
+
+- Summary table ranking regions based on KPIs (e.g., GHI, DNI).
+
+- 📈 Metric Comparison Viewer: Time series explorer with dynamic filters.
+
+### 🖼️ Dashboard Screenshots
+Screenshots from the deployed app are available below:
 ---
 
 ## How to Run
