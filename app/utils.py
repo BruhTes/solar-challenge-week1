@@ -15,38 +15,32 @@ def get_data_path(filename):
     else:
         return None # Or raise an error
 
-@st.cache_data(ttl=3600) # Cache data for 1 hour to avoid reloading on every interaction
+@st.cache_data(ttl=3600)
 def load_cleaned_data(country_name_full):
     """
-    Loads a single cleaned dataset for a given country.
-    country_name_full should be like 'Benin (Malanville)'
+    Loads a single cleaned dataset from Google Drive for a given country.
     """
     file_map = {
-        'Benin (Malanville)': 'benin-malanville_clean.csv',
-        'Sierra Leone (Bumbuna)': 'sierraleone-bumbuna_clean.csv',
-        'Togo (Dapaong QC)': 'togo-dapaong_qc_clean.csv'
+        'Benin (Malanville)': 'https://drive.google.com/uc?export=download&id=15b9GK44EsXAWef7gR8SYIsYC36jt-snV',
+        'Sierra Leone (Bumbuna)': 'https://drive.google.com/uc?export=download&id=1cYIm1K2liDkdrHOmeILJqmduokdxt6Rk',
+        'Togo (Dapaong QC)': 'https://drive.google.com/uc?export=download&id=1IkeFZIOkiUw3HLIQpzUgyXFtVyLfTZBD'
     }
-    
-    filename_short = file_map.get(country_name_full)
-    if not filename_short:
+
+    file_url = file_map.get(country_name_full)
+    if not file_url:
         st.error(f"No file mapping found for country: {country_name_full}")
         return pd.DataFrame()
 
-    file_path = get_data_path(filename_short)
-    
-    if file_path and os.path.exists(file_path):
-        try:
-            df = pd.read_csv(file_path)
-            if 'Timestamp' in df.columns:
-                 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
-            df['Country'] = country_name_full # Add country name for combined use if needed
-            return df
-        except Exception as e:
-            st.error(f"Error loading data for {country_name_full} from {file_path}: {e}")
-            return pd.DataFrame()
-    else:
-        st.error(f"Cleaned data file not found for {country_name_full} (expected {filename_short} in data/). Searched: {file_path}")
+    try:
+        df = pd.read_csv(file_url)
+        if 'Timestamp' in df.columns:
+            df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+        df['Country'] = country_name_full
+        return df
+    except Exception as e:
+        st.error(f"Error loading data for {country_name_full} from Google Drive: {e}")
         return pd.DataFrame()
+
 
 @st.cache_data(ttl=3600)
 def load_all_cleaned_data(countries_to_load):
